@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso</title>
+</head>
+
+<body>
+    <app-navbar></app-navbar>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+
+                <div class="col-12 user-img">
+                    <img src="https://img.icons8.com/flat_round/64/000000/hedgehog.png" />
+                </div>
+
+                <form class="col-12 " (ngSubmit)="f.form.valid && logIn()" #f="ngForm" novalidate>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ingrese email o usuario." name="username" [(ngModel)]="model.username" #name="ngModel" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Contraseña" name="password" [(ngModel)]="model.password" required/>
+                    </div>
+                    <button type="submit" class="btn"><i class="fa fa-sign-in" aria-hidden="true"> Entrar</i></button>
+                </form>
+
+                <div class="col-12 forgot">
+                    <a href="#">Olvide mi contraseña.</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
